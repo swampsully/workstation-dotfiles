@@ -1,0 +1,70 @@
+
+
+log_level = "warn"
+outputs = { Targets = ["DP-10"] }
+position = "Top"
+app_launcher_cmd = "rofi -show drun"
+
+[modules]
+left =  [ "appLauncher", ["Updates", "Workspaces","WindowTitle" ] ]
+center = [ "Clock" ]
+right = [ "SystemInfo", [ "Settings" ] ]
+
+[updates]
+check_cmd = "checkupdates; yay -Qua"
+update_cmd = 'kitty -e bash -c "yay; echo Done - Press enter to exit; read" &'
+
+[workspaces]
+enable_workspace_filling = true
+
+[[CustomModule]]
+name = "appLauncher"
+icon = "󰣇"
+command = " rofi -show drun"
+
+[window_title]
+truncate_title_after_length = 100
+
+[settings]
+# The default value is the following, the items are shown in this order:
+indicators = ["IdleInhibitor", "PowerProfile", "Audio", "Bluetooth", "Network", "Vpn", "Battery"]
+
+[appearance]
+style = "Solid"
+
+primary_color = "#e6f6f0"
+success_color = "#9ece6a"
+text_color = "#e6f6f0"
+workspace_colors = [ "#00110b", "#9ece6a" ]
+special_workspace_colors = [ "#7aa2f7", "#9ece6a" ]
+
+[appearance.danger_color]
+base = "#f7768e"
+weak = "#e0af68"
+
+[appearance.background_color]
+base = "#00110b"
+weak = "#24273a"
+strong = "#414868"
+
+[appearance.secondary_color]
+base = "#0c0d14"
+
+#background_opacity 0.3
+#foreground              #e6f6f0
+ #background              #00110b
+ #selection_foreground    #00110b
+ #selection_background    #E25F4B
+
+ #cursor                  #E25F4B
+ #cursor_text_color       #00110b
+
+# URL underline color when hove
+ #url_color               #e6f6f0
+
+# Tab bar colors
+ #active_tab_foreground   #e6f6f0
+ #active_tab_background   #00110b
+ #inactive_tab_foreground #e6f6f0
+ #inactive_tab_background #00110b
+ #tab_bar_background      #e6f6f0
