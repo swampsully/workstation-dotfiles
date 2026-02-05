@@ -1,0 +1,14 @@
+
+##################################################################
+# Thhis is a list of Packages that make the perffect arch system #
+##################################################################
+
+############################
+# For Flatpak Bambu Studio #
+############################
+
+libportal
+libportal-gtk3
+libportal-gtk4
+xdg-desktop-portal-gtk
+xdg-desktop-portal-hyprland
